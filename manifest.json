@@ -1,0 +1,24 @@
+{
+  "manifest_version": 2,
+  "name": "KNSH Crawler",
+  "description": "crawl books data from KNSH for every school",
+  "version": "1.0.2",
+   "icons": {
+  },
+  "background": {
+      "scripts": ["js/jquery-2.1.0.min.js","background.js"]    
+  },
+  "page_action": {
+      "default_icon": "imgs/Favicon.ico",
+      "default_title": "Get Data",
+      "default_popup": "popup.html"
+    },
+  "content_scripts": [
+    {
+      "matches": ["*://*/*"],
+      "js": ["js/jquery-2.1.0.min.js","js/bootstrap.min.js","js/keycode.js","./js/init_storageData.js","contentScript.js"]
+    }
+  ],
+  "permissions": ["tabs", "webNavigation","storage"],
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
+}

@@ -1,0 +1,160 @@
+/* line 3, ../sass/settingPage_style.sass */
+body {
+  background: #fcfdf4;
+}
+
+/* line 6, ../sass/settingPage_style.sass */
+.all-short-cut-list {
+  background: #c6e8eb;
+}
+/* line 8, ../sass/settingPage_style.sass */
+.all-short-cut-list thead {
+  background: #3f6589;
+  color: #fcfdf4;
+}
+/* line 12, ../sass/settingPage_style.sass */
+.all-short-cut-list thead tr td {
+  vertical-align: middle;
+}
+/* line 15, ../sass/settingPage_style.sass */
+.all-short-cut-list tbody #detail-col-setting {
+  background: #efecca;
+}
+
+/* line 18, ../sass/settingPage_style.sass */
+.container {
+  margin-top: 15px;
+}
+
+/* line 22, ../sass/settingPage_style.sass */
+.display-none {
+  display: none;
+}
+
+/* line 38, ../sass/settingPage_style.sass */
+.un-remove-state-icon {
+  width: 20px;
+  height: 20px;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  -ms-border-radius: 25px;
+  -o-border-radius: 25px;
+  border-radius: 25px;
+  background: red;
+  color: white;
+  text-align: center;
+  border: 2px solid white;
+  font-size: 0.8em;
+  cursor: pointer;
+  margin: auto;
+  margin-top: 5px;
+  -webkit-box-shadow: black 1px 1px 5px;
+  -moz-box-shadow: black 1px 1px 5px;
+  box-shadow: black 1px 1px 5px;
+}
+
+/* line 42, ../sass/settingPage_style.sass */
+.remove-state-icon {
+  width: 20px;
+  height: 20px;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  -ms-border-radius: 25px;
+  -o-border-radius: 25px;
+  border-radius: 25px;
+  background: red;
+  color: white;
+  text-align: center;
+  border: 2px solid white;
+  font-size: 0.8em;
+  cursor: pointer;
+  margin: auto;
+  margin-top: 5px;
+  -webkit-transform: rotate(90deg);
+  -webkit-box-shadow: black 1px -1px 5px;
+  -moz-box-shadow: black 1px -1px 5px;
+  box-shadow: black 1px -1px 5px;
+}
+
+/* line 47, ../sass/settingPage_style.sass */
+.searchCut-short-cut {
+  text-align: right;
+}
+
+/* line 50, ../sass/settingPage_style.sass */
+.short-cut-prefix {
+  position: absolute;
+  z-index: 20;
+  margin-top: 5px;
+  margin-left: 10px;
+}
+
+/* line 58, ../sass/settingPage_style.sass */
+.copy-right {
+  text-align: center;
+}
+
+/* line 61, ../sass/settingPage_style.sass */
+.switch-checkbox {
+  position: relative;
+  top: 5px;
+}
+
+/* line 65, ../sass/settingPage_style.sass */
+.unselected-trans {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+  opacity: 0.5;
+}
+
+/* line 69, ../sass/settingPage_style.sass */
+#setting-page-title .title-text {
+  font-size: 2.5em;
+  vertical-align: bottom;
+}
+/* line 72, ../sass/settingPage_style.sass */
+#setting-page-title span {
+  font-size: 2em;
+}
+
+/* line 76, ../sass/settingPage_style.sass */
+#myModal .modal-header {
+  background: #3f6589;
+  color: #fcfdf4;
+}
+
+/* line 81, ../sass/settingPage_style.sass */
+.hover-for-hint:hover + .hint_img {
+  display: block;
+}
+
+/* line 85, ../sass/settingPage_style.sass */
+.hint_img {
+  position: absolute;
+  z-index: 10;
+  display: none;
+  padding: 8px;
+  background: black;
+  /* Fallback for web browsers that doesn't support RGBa */
+  background: black;
+  /* RGBa with 0.85 opacity */
+  background: rgba(0, 0, 0, 0.7);
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  width: 90%;
+  margin-top: 5px;
+}
+/* line 98, ../sass/settingPage_style.sass */
+.hint_img img {
+  width: 100%;
+  left: 5%;
+  margin-top: 5px;
+}
+/* line 102, ../sass/settingPage_style.sass */
+.hint_img .hint_title {
+  margin: 8px;
+  color: white;
+  font-size: 1.5em;
+}

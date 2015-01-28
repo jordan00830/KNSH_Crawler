@@ -1,0 +1,707 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv="Cache-Control" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<meta http-equiv="Program" content="no-cache">
+<meta name="dirstribation" content="global">
+<meta name="robots" content="index,follow">
+<meta name="revisit" content="1 days">
+<meta name="revisit-after" content="1 days">
+<meta name="title" content="康軒文教集團 - 全國最專業的教育集團入口網站">
+<meta name="keywords" content="康軒教育網,網路書店,授權,安親,補習班,一綱多本,教育,教師,購書,幼教,小康軒,愛讀書屋,國小,國中,考試,會考,特招,升學,康軒版本,教育資源,教育動態,基礎教育,中小學教育,教科書,九年一貫,12年國教,卓越盃數學競賽,課本,教材,兒童雜誌,康軒童書,參考書,康軒,研習,國教,945,康軒文教,康軒出版社,康軒電子書,教學APP,書局,版本查詢,經銷商,教具,國語,國文,數學,社會,自然,自然與生活科技,生活,歷史,地理,公民,英語,英文,閩南語,客家語,鄉土教材,幼稚園,雙語,teacher,children,kids,student,school,education,learn,textbook">
+<meta name="description" content="康軒文教集團為全國中小學師生、家長及關心教育人士，特別成立教學服務網站「康軒教師網」、購書服務網站「k9Books康軒書屋」、企業形象網站「康軒文教集團(原康軒教育網)」以及教育產品服務網站，包括Top945康軒學習雜誌、康軒會考特招評量網、康軒育橋評量網、康軒番薯網、小康軒幼教網、優數網、Hello,華語以及康軒雙語學校、康橋附設幼兒園、台灣拓人教育等，是全國最專業的教育集團入口網站。">
+<title>康軒文教集團 - 全國最專業的教育集團入口網站</title>
+<link rel="shortcut icon" href="/Template/2011/Images/Favicon.ico">
+<link rel="icon" type="image/gif" href="/Template/2011/Images/Favicon.gif">
+<link rel="stylesheet" type="text/css" href="/Template/2011/Css/Style.css">
+<link rel="stylesheet" type="text/css" href="/Template/2011/Css/Menu.css">
+<script type="text/javascript" src="/Template/2011/Scripts/jquery.js"></script>
+<script type="text/javascript" src="/Template/2011/Scripts/slider.js" ></script>
+<script type="text/javascript" src="/Template/2011/Scripts/jquery-1.5.2.js"></script>
+<script type="text/javascript" src="/Template/2011/Scripts/iepngfix_tilebg.js"></script>
+<script type="text/javascript" src="/Include/Javascript.js"></script>
+<script type="text/javascript"> 
+<!--
+var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-535489-3']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+//-->
+</script>
+
+<script type="text/javascript">
+$(function(){
+ var thumbSize = 'large', // 設定要取得的縮圖是大圖還是小圖 大圖寬高為 350X293；小圖寬高為 110X82
+ imgWidth = '110', // 限制圖片的寬
+ imgHeight = '82', // 限制圖片的高
+ swfWidth = '350', // 指定 YouTube 影片的寬
+ swfHeight = '293', // 指定 YouTube 影片的高
+ Costom = '', // 自訂欄位 &theme=cat&version=3 or &theme=dark&version=3
+ //autoPlay = '&autoplay=0',// 是否載入 YouTube 影片後自動播放；若不要自動播放則設成 0
+ autoPlay = '',// 是否載入 YouTube 影片後自動播放；若不要自動播放則設成空字串
+ fullScreen = '&fs=1'; // 是否允許播放 YouTube 影片時能全螢幕播放
+ $('.itemList>li>a').each(function(){
+ // 取得要連結轉換的網址及訊息內容
+ var _this =  $(this),
+ _url = _this.attr('href'),
+ _info = _this.text(),
+ _type = (thumbSize == 'large') ? 0 : 2;
+ // 取得 vid
+ var vid = _url.match('[\\?&]v=([^&#]*)')[1];
+ // 取得縮圖
+ var thumbUrl = "http://img.youtube.com/vi/"+vid+"/" + _type + ".jpg";
+ // 把目前超連結的內容轉換成圖片並加入 click 事件
+ _this.html('<img src="'+thumbUrl+'" alt="'+_info+'" title="'+_info+'" width="'+imgWidth+'" height="'+imgHeight+'" style="margin: 2px;"/>').click(function(){
+ return false;
+ }).focus(function(){
+  this.blur();
+ }).children('img').click(function(){
+  // 當點擊到圖片時就轉換成 YouTube 影片
+  var swf  = '<object width="'+swfWidth+'" height="'+swfHeight+'">';
+  swf += '<param name="movie" value="http://www.youtube.com/v/'+vid+Costom+autoPlay+fullScreen+'"></param>';
+  swf += '<param name="wmode" value="transparent"></param>';
+  swf += (fullScreen == '&fs=1') ? '<param name="allowfullscreen" value="true"></param>' : '';
+  swf += '<embed type="application/x-shockwave-flash" src="http://www.youtube.com/v/'+vid+Costom+autoPlay+fullScreen+'" ';
+  swf += (fullScreen == '&fs=1') ? 'allowfullscreen="true" ' : '';
+  swf += 'wmode="transparent" width="'+swfWidth+'" height="'+swfHeight+'"></embed>';
+  swf += '</object/>';
+  $('.video').html(swf);
+  return false;
+ });
+ });
+ // 先載入第一個影片
+ $('.itemList>li>a').eq(0).children('img').click();
+ // 變更影片播放為自動播放
+ autoPlay = '&autoplay=1';
+});
+</script>
+
+<style type="text/css">
+.showBox {
+    width: 360px;
+    height: 132px;
+    position: relative;
+    overflow: hidden;
+    font-family: Arial;
+    letter-spacing: 1px;
+    float: left;
+    margin-right: 0px;
+}
+.showBox * {
+    margin: 0;
+    padding: 0;
+}
+.showBox a {
+    color: blue;
+    text-decoration: none;
+}
+.showBox .roll {
+    position: absolute;
+    top: 16px;
+    right: 80px;
+}
+.showBox .roll a {
+    float: left;
+    width: 7px;
+    height: 7px;
+    margin-right: 3px;
+    text-indent: -9999px;
+    background: url(images/dot.gif) no-repeat 0 0;
+}
+.showBox .roll a.on {
+    background-position: 0 -27px;
+}
+.showBox .showBoxbtn {
+    position: absolute;
+    top: 10px;
+    right: 5px;
+    height: 20px;
+}
+.showBox .showBoxbtn a {
+    width: 31px;
+    height: 24px;
+    float: left;
+    text-indent: -9999px;
+}
+.showBox .showBoxbtn a.prev {
+    background: url(images/btn.gif) no-repeat 0 -42px;
+}
+.showBox .showBoxbtn a.next {
+    background: url(images/btn.gif) no-repeat 0 0;
+}
+.showBox ul.itemList, .showBox ul.itemList li {
+    list-style: none;
+}
+.showBox ul.itemList {
+    position: absolute;
+    top: 40px;
+    white-space: nowrap;
+}
+.showBox ul.itemList li {
+    display: inline;
+}
+.showBox ul.itemList li .adContent img { 
+    display: inline-block; 
+    width: 110px;
+} 
+.showBox ul.itemList li .adContent img { 
+    margin: 2px;
+} </style>
+
+<script type="text/javascript">
+$(function(){
+ $('.showBox').each(function(){
+  // 先取得必要的元素並用 jQuery 包裝並設定移動速度
+  var $showBox = $(this),
+  $itemList = $showBox.find('ul.itemList'),
+  $items = $itemList.find('li'),
+  $adContent = $items.find('.adContent'),
+  _margin = parseInt($adContent.css('margin-left')) || 0,
+  width = 360,
+  speed = 400;
+
+  // 針對不支援 cssFloat 或 IE 瀏覽器 減回 $adContent 的 margin-left 及 margin_right 
+  if(!$.support.cssFloat || $.browser.msie){ 
+   width -= _margin;
+  } 
+
+  // 產生小圓點
+  var rollStr = '';
+  $items.each(function(i, ele){
+   rollStr += '<a href="javascript:void(0);">'+i+'</a>\r\n';
+  });
+
+  // 加入小圓點並加上 click 事件
+  $showBox.find('.roll').html(rollStr).find('a').click(function(){
+   move($(this).index());
+  }).eq(0).addClass('on');
+
+  // 當點擊左右鈕時
+  $showBox.find('.prev, .next').click(function(){
+  // 找出目前是顯示那一組
+  var no = $showBox.find('.roll a.on').index();
+  // 判斷接下來要移往那一組
+  no = ($(this).attr('className').indexOf('prev')>-1 ? (no - 1 + $items.length) : (no + 1))  % $items.length; 
+  // 進行移動
+  move(no);
+
+  return false;
+ });
+        
+// 控制移動的函式
+ function move(no){
+  $itemList.stop().animate({ 
+   left: width * no * -1 
+  }, speed); 
+  $showBox.find('.roll a').eq(no).addClass('on').siblings().removeClass('on'); 
+ } 
+
+ function move2(no){
+  $itemList.stop().animate({
+   left: $items.eq(no).position().left * -1 + (isIE67 ? _margin : 0)
+  }, speed);
+  $showBox.find('.roll a').eq(no).addClass('on').siblings().removeClass('on');
+  }
+ });
+    
+ $('a').focus(function(){
+  this.blur();
+ });
+});
+</script>
+</head>
+
+
+
+<SCRIPT LANGUAGE="javascript">
+<!--
+//window.open ('/Popup/20130918/index.html', '', 'height=350, width=390, top=0, left=0, toolbar=no, menubar=no, scrollbars=no, resizable=no,location=no, status=no');
+//-->
+</SCRIPT>
+
+<body onload="MM_preloadImages('/Template/2011/Images/nav1_over.gif','/Template/2011/Images/nav2_over.gif','/Template/2011/Images/nav3_over.gif','/Template/2011/Images/nav4_over.gif','/Template/2011/Images/nav5_over.gif','/Template/2011/Images/nav6_over.gif','/Template/2011/Images/nav7_over.gif','/Template/2011/Images/nav8_over.gif')">
+<div id="bg"><a name="top"></a>
+<div class="wrapper">
+<div id="bg2">
+<div id="content">
+<div id="header">
+<div class="logo"><a href="/Index.asp"><img src="/Template/2011/Images/logo.gif" width="165" height="55" border="0" /></a></div>
+<div class="sitemap">
+ <a href="/Siteguide.asp">網群導覽</a>
+ <span>&nbsp;|&nbsp;</span>
+ <a href="javascript:SetHomepage();">設為首頁</a>
+ <span>&nbsp;|&nbsp;</span>
+ <a href="javascript:SetFavority();">我的最愛</a>
+ <span>&nbsp;|&nbsp;</span>
+ <a href="/Feedback.asp?Type=1">廣告提案</a>
+ <span>&nbsp;|&nbsp;</span>
+ <a href="/Feedback.asp?Type=2">合作提案</a>
+ <span>&nbsp;|&nbsp;</span>
+ <a href="/Feedback.asp">客服信箱</a>
+ <span>&nbsp;|&nbsp;</span>
+ <a href="/Sitemap.asp">網站地圖</a>
+ <span>&nbsp;|&nbsp;</span>
+ <span class="sitemap_color">&nbsp;<span style="font color:#666666">集團簡介本</span>&nbsp;<a href="http://219.87.140.79/EcocatCMS/lib/ecolab/export/90e8e40b_2ba1ffed/book_swf.html" target="_blank">&nbsp;繁體&nbsp;</a>&nbsp;<a href="http://219.87.140.79/EcocatCMS/lib/ecolab/export/b8c0fec3_cce37425/book_swf.html" target="_blank">&nbsp;简体&nbsp;</a></span>
+ <span>|&nbsp;</span>
+ <a href="http://www.facebook.com/KangHsuan" target="_blank"><img src="/Template/2011/Images/facebook_16.png" width="16" height="16" border="0" align="absmiddle" /> 加入粉絲團</a>
+</div>
+</div>
+
+<div id="columns">
+<div id="side_column">
+<div class="nav_side">
+  <p><img src="/Template/2011/Images/sidenav_title.gif" width="200" height="38" /></p>
+  <p><a href="/_KNSH/Plan.asp" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('side_nav1','','/Template/2011/Images/sidenav1_over.gif',1)"><img src="/Template/2011/Images/sidenav1_on.gif" name="side_nav1" width="200" height="36" border="0" id="side_nav1" /></a></p>
+  <p><a href="/_KNSH/Doubts.asp" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('side_nav2','','/Template/2011/Images/sidenav2_over.gif',1)"><img src="/Template/2011/Images/sidenav2_on.gif" name="side_nav2" width="200" height="36" border="0" id="side_nav2" /></a></p>
+  <p><a href="/_KNSH/Number.asp" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('side_nav3','','/Template/2011/Images/sidenav3_over.gif',1)"><img src="/Template/2011/Images/sidenav3_on.gif" name="side_nav3" width="200" height="36" border="0" id="side_nav3" /></a></p>
+  <p><a href="/_KNSH/Errata.asp" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('side_nav4','','/Template/2011/Images/sidenav4_over.gif',1)"><img src="/Template/2011/Images/sidenav4_on.gif" name="side_nav4" width="200" height="36" border="0" id="side_nav4" /></a></p>
+  <p><a href="/_KNSH/Copyrights.asp" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('side_nav5','','/Template/2011/Images/sidenav5_over.gif',1)"><img src="/Template/2011/Images/sidenav5_on.gif" name="side_nav5" width="200" height="36" border="0" id="side_nav5" /></a></p>
+  <p><a href="/_KNSH/Version.asp" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('side_nav6','','/Template/2011/Images/sidenav6_over.gif',1)"><img src="/Template/2011/Images/sidenav6_on.gif" name="side_nav6" width="200" height="36" border="0" id="side_nav6" /></a></p>
+  <p><a href="http://www.k9books.com.tw/ec99/default.asp" target="_blank" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('side_nav7','','/Template/2011/Images/sidenav7_over.gif',1)"><img src="/Template/2011/Images/sidenav7_on.gif" name="side_nav7" width="200" height="36" border="0" id="side_nav7" /></a></p>
+</div><div id="banner_120x90">
+ <a href="http://www.top945.com.tw/promo/20150108/index.asp?cf=006009" target="_blank"><img src="/Upload/Main_AD/175/Files.gif" width="120" height="90" border="0" alt="康軒學習雜誌，試讀版免費索取～加碼好禮抽獎300名！"></a>
+
+ <a href="http://promo.945enet.com.tw/BEPC" target="_blank"><img src="/Upload/Main_AD/174/Files.gif" width="120" height="90" border="0" alt="參加，就有機會中獎！康軒正版參考書抽好禮！"></a>
+
+ <a href="http://www.taiwanwma.org/index.asp" target="_blank"><img src="/Upload/Main_AD/151/Files.gif" width="120" height="90" border="0" alt="「台灣野外地區緊急救護協會」邀請您加入！"></a>
+
+ <a href="http://ad.knsh.com.tw/r.asp?SID={3A2ACC4A-DD10-4B2F-9EBB-30A9AE51DC8C}" target="_blank"><img src="/Upload/Main_AD/135/Files.gif" width="120" height="90" border="0" alt="教學App免費體驗"></a>
+
+ <a href="http://ad.knsh.com.tw/r.asp?SID={4D05E47A-D9F6-4025-9E42-90D7DC502889}" target="_blank"><img src="/Upload/Main_AD/110/Files.gif" width="120" height="90" border="0" alt="按讚，成為教育萬事通！ "></a>
+
+ <a href="http://www.k9books.com.tw/ec99/knsh/ShowCategory.asp?category_id=286" target="_blank"><img src="/Upload/Main_AD/60/Files.gif" width="120" height="90" border="0" alt="新學期新書上架"></a>
+
+ <a href="http://ad.knsh.com.tw/r.asp?SID={49654AE4-309D-4156-97C0-1437C6DD5BFD}" target="_blank"><img src="/Upload/Main_AD/49/Files.gif" width="120" height="90" border="0" alt="最佳教學平台-康軒教師網"></a>
+
+ <a href="http://ad.knsh.com.tw/r.asp?SID={C30109A6-944F-42F1-BD28-B851CD194378}" target="_blank"><img src="/Upload/Main_AD/27/Files.gif" width="120" height="90" border="0" alt="康軒文教公益贈書 幫助弱勢學習不中斷"></a>
+
+</div>
+
+<!--include virtual="/Include/SocialNetworkService.asp"-->
+</div>
+<div id="main_column">
+
+<div class="header_pic"><img src="/Template/2011/Images/header.jpg" width="780" height="110" /></div>
+<div id="menu">
+<ul class="menu">
+ <li><a href="/_Group/Chairman.asp" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('nav1','','/Template/2011/Images/nav1_over.gif',1)"><img src="/Template/2011/Images/nav1_on.gif" name="nav1" width="99" height="35" border="0" id="nav1" /></a>
+ <div>
+ <ul>
+  <li><a href="/_Group/Chairman.asp"><span>董事長的話</span></a></li>
+  <li><a href="/_Group/History.asp"><span>歷史沿革</span></a></li>
+  <li><a href="/_Group/Charity.asp"><span>公益活動</span></a></li>
+  <li><a href="/_Group/News.asp"><span>新聞專區　　　»</span></a>
+  <div>
+  <ul>
+   <li><a href="/_Group/News.asp"><span>新聞發布</span></a></li>
+   <li><a href="/_Group/News_Media.asp"><span>媒體報導</span></a></li>
+  </ul>
+  </div>
+  </li>
+<!--
+  <li><a href="/_Group/Sport_01.asp"><span>運動康軒</span></a></li>
+-->
+  <li><a href="http://blog.udn.com/kstblog2009" target="_blank"><span>運動康軒</span></a></li>
+  <li><a href="/_Group/Award.asp"><span>得獎紀錄</span></a></li>
+  <li><a href="/_Group/Welfare.asp"><span>求才資訊　　　»</span></a>
+  <div>
+  <ul>
+   <li><a href="/_Group/Welfare.asp"><span>福利制度</span></a></li>
+   <li><a href="http://www.104.com.tw/jobbank/cust_job/introduce.cfm?j=404a446b3c363f683c583a1d1d1d1d5f2443a363189j48" target="_blank"><span>最新職缺</span></a></li>
+  </ul>
+  </div>
+  </li>
+ </ul>
+ </div>
+ </li>
+
+ <li><a href="/_KNSH/About.asp" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('nav2','','/Template/2011/Images/nav2_over.gif',1)"><img src="/Template/2011/Images/nav2_on.gif" name="nav2" width="92" height="35" border="0" id="nav2" /></a>
+ <div>
+ <ul>
+  <li><a href="/_KNSH/About.asp" class="parent"><span>關於康軒</span></a></li>
+  <li><a href="/_KNSH/Locations.asp"><span>營業據點</span></a></li>
+  <li><a href="/_KNSH/Service.asp"><span>購書服務</span></a></li>
+  <li><a href="/_KNSH/Logistics.asp"><span>桃園物流中心</span></a></li>
+  <li><a href="/_KNSH/Plan.asp"><span>教科書情報　　»</span></a>
+  <div>
+  <ul>
+   <li><a href="/_KNSH/Plan.asp"><span>課程計畫</span></a></li>
+   <li><a href="/_KNSH/Number.asp"><span>審定字號</span></a></li>
+   <li><a href="/_KNSH/Doubts.asp"><span>教材釋疑</span></a></li>
+   <li><a href="/_KNSH/Copyrights.asp"><span>尋找著作權人</span></a></li>
+   <li><a href="/_KNSH/Errata.asp"><span>勘誤資訊</span></a></li>
+   <li><a href="/_KNSH/Version.asp"><span>各校版本查詢</span></a></li>
+  </ul>
+  </div>
+  </li>
+  <li><a href="/_KNSH/Kindergarten.asp"><span>產品資訊　　　»</span></a>
+  <div>
+   <ul>
+   <li><a href="/_KNSH/Kindergarten.asp"><span>幼教產品</span></a></li>
+   <li><a href="/_KNSH/Primary.asp"><span>國小產品</span></a></li>
+   <li><a href="/_KNSH/Junior.asp"><span>國中產品</span></a></li>
+   <li><a href="/_KNSH/Children.asp"><span>兒童雜誌</span></a></li>
+<!--   <li><a href="/_KNSH/Learn.asp"><span>康軒學習教室</span></a></li>-->
+   <li><a href="/_KNSH/Bookstore.asp"><span>康軒童書</span></a></li>
+   <li><a href="/_KNSH/Huayu.asp"><span>華語教材</span></a></li>
+   <li><a href="/_KNSH/EduApp.asp"><span>教學APP</span></a></li>
+   <li><a href="/_KNSH/Distribution.asp"><span>經銷據點</span></a></li>
+  </ul>
+  </div>
+  </li>
+ </ul>
+ </div>
+ </li>
+
+ <li><a href="/_KCBS/Websites.asp" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('nav3','','/Template/2011/Images/nav3_over.gif',1)"><img src="/Template/2011/Images/nav3_on.gif" name="nav3" width="127" height="35" border="0" id="nav3" /></a>
+ <div>
+ <ul>
+  <li><a href="/_KCBS/Websites.asp"><span>康橋網站</span></a></li>
+  <li><a href="/_KCBS/About_KCBS.asp"><span>台北康橋雙語　»</span></a>
+  <div>  
+   <ul>
+   <li><a href="/_KCBS/About_KCBS.asp"><span>關於台北康橋</span></a></li>
+   <li><a href="/_KCBS/Xiugang.asp"><span>秀岡校區</span></a></li>
+   <li><a href="/_KCBS/Qingshan.asp"><span>青山校區</span></a></li>
+   <li><a href="/_KCBS/Knsh.asp"><span>康軒校區</span></a></li>
+   <li><a href="/_KCBS/Dazhi.asp"><span>大直校區</span></a></li>
+   <li><a href="http://www.kcbs.ntpc.edu.tw/ch/intro/intro_index.html" target="_blank"><span>招生專區</span></a></li>
+  </ul>  
+  </div>
+  <li><a href="/_KCBS/About_KCISEC.asp"><span>華東康橋國際　»</span></a>
+  <div>  
+   <ul>
+   <li><a href="/_KCBS/About_KCISEC.asp"><span>關於華東康橋</span></a></li>
+   <li><a href="http://www.kcisec.com/zptop" target="_blank"><span>招生專區</span></a></li>
+   </ul>
+  </div>
+  </li>
+ </ul>
+ </div>
+ </li>
+
+ <li><a href="/_KXMC/About.asp" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('nav4','','/Template/2011/Images/nav4_over.gif',1)"><img src="/Template/2011/Images/nav4_on.gif" name="nav4" width="125" height="35" border="0" id="nav4" /></a>
+ <div>
+ <ul>
+  <li><a href="/_KXMC/About.asp"><span>關於大陸康軒</span></a></li>
+  <li><a href="/_KXMC/Locations.asp"><span>營業據點</span></a></li>
+  <li><a href="/_KXMC/Preschool.asp"><span>產品資訊　　　»</span></a>
+  <div>
+  <ul>
+   <li><a href="/_KXMC/Preschool.asp"><span>學前教材</span></a></li>
+   <li><a href="/_KXMC/Sci_kids.asp"><span>科學小超人</span></a></li>
+   <li><a href="/_KXMC/Training.asp"><span>小康軒培訓中心</span></a></li>
+   <li><a href="/_KXMC/Vocational.asp"><span>職業教育教材</span></a></li>
+  </ul>
+  </div>
+  </li>
+ </ul>
+ </div>
+ </li>
+
+ <li><a href="/_BEPC/About.asp" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('nav5','','/Template/2011/Images/nav5_over.gif',1)"><img src="/Template/2011/Images/nav5_on.gif" name="nav5" width="92" height="35" border="0" id="nav5" /></a>
+ <div>
+ <ul>
+  <li><a href="/_BEPC/About.asp"><span>關於育橋</span></a></li>
+  <li><a href="/_BEPC/Distribution.asp"><span>經銷據點</span></a></li>
+  <li><a href="/_BEPC/Products.asp"><span>產品資訊</span></a></li>
+ </ul>
+ </div>
+ </li>
+
+ <li><a href="/_TACT/About.asp" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('nav6','','/Template/2011/Images/nav6_over.gif',1)"><img src="/Template/2011/Images/nav6_on.gif" name="nav6" width="91" height="35" border="0" id="nav6" /></a>
+ <div>
+ <ul>
+  <li><a href="/_TACT/About.asp"><span>關於拓人</span></a></li>
+  <li><a href="/_TACT/Locations.asp"><span>分校據點</span></a></li>
+ </ul>
+ </div>
+ </li>
+
+ <!--li><a href="/_eSmart/About.asp" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('nav7','','/Template/2011/Images/nav7_over.gif',1)"><img src="/Template/2011/Images/nav7_on.gif" name="nav7" width="74" height="35" border="0" id="nav7" /></a>
+ <div>
+ <ul>
+  <li><a href="/_eSmart/About.asp"><span>關於智慧橋</span></a></li>
+ </ul>
+ </div>
+ </li-->
+
+ <li><a href="/Index.asp" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('nav8','','/Template/2011/Images/nav8_over.gif',1)"><img src="/Template/2011/Images/nav8_on.gif" name="nav8" width="154""80" height="35" border="0" id="nav8" /></a></li>
+
+</ul>
+</div>
+
+<div id="banner_block">
+<div id="banner">
+<div id="adblock">
+<ul class="showbox">
+  <li><a href="/_KNSH/About.asp"><img src="Images/Banner_1.gif" width="560" height="176" border="0" /></a></li>
+  <li><a href="/_KCBS/Websites.asp"><img src="Images/Banner_2.gif" width="560" height="176" border="0" /></a></li>
+  <li><a href="/_KXMC/About.asp"><img src="Images/Banner_3.gif" width="560" height="176" border="0" /></a></li>
+  <li><a href="/_TACT/About.asp"><img src="Images/Banner_4.gif" width="560" height="176" border="0" /></a></li>
+  <li><a href="http://blog.udn.com/kstblog2009" target="_blank"><img src="Images/Banner_5.gif" width="560" height="176" border="0" /></a></li>
+</ul>
+<ul class="link">
+  <li><a href="/_KNSH/About.asp">康軒文教事業</a></li>
+  <li><a href="/_KCBS/Websites.asp">康橋雙語學校</a></li>
+  <li><a href="/_KXMC/About.asp">大陸康軒文教</a></li>
+  <li><a href="/_TACT/About.asp">台灣拓人</a></li>
+  <li><a href="http://blog.udn.com/kstblog2009" target="_blank">運動康軒部落格</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="news_block">
+<div id="news_left">
+<div id="news_1">
+<div class="title"><span>康軒焦點</span></div>
+<div class="pic"><a href="http://www.knsh.com.tw/_KNSH/Version.asp" target="_blank"><img src="/Images/News_Area.jpg" width="100" height="75" border="0" /></a></div>
+<div class="content_block">
+<div class="headline"><a href="http://www.knsh.com.tw/_KNSH/Version.asp" target="_blank"><span title="‧103學年度下學期國中小各校版本開放查詢！">‧103學年度下學期國中小各校…</span></a></div>
+<div class="article"><span title="本區提供全省國中小各校(不含補校)教科書審定本(不含國小英語/鄉土語言)使用版本查詢，資料僅供參考，若需確認實際使用版本，煩請逕與各校查詢。">本區提供全省國中小各校(不含補校)教科書審定本(不含國小英語/鄉土語言)使用版本查詢，資料僅供參考，若需確認實際使用版本，煩請逕與各校查…<div style="float:right;_margin-top:-25px;*margin-top:-25px;"><a href="http://www.facebook.com/dialog/feed?app_id=400548309962867&link=http%3A%2F%2Fwww%2Eknsh%2Ecom%2Etw%2F%5FKNSH%2FVersion%2Easp&picture=http%3A%2F%2Fwww%2Eknsh%2Ecom%2Etw%2FImages%2FNews%5FArea%2Ejpg&name=%E2%80%A7103%E5%AD%B8%E5%B9%B4%E5%BA%A6%E4%B8%8B%E5%AD%B8%E6%9C%9F%E5%9C%8B%E4%B8%AD%E5%B0%8F%E5%90%84%E6%A0%A1%E7%89%88%E6%9C%AC%E9%96%8B%E6%94%BE%E6%9F%A5%E8%A9%A2%EF%BC%81&caption=%E2%80%A7103%E5%AD%B8%E5%B9%B4%E5%BA%A6%E4%B8%8B%E5%AD%B8%E6%9C%9F%E5%9C%8B%E4%B8%AD%E5%B0%8F%E5%90%84%E6%A0%A1%E7%89%88%E6%9C%AC%E9%96%8B%E6%94%BE%E6%9F%A5%E8%A9%A2%EF%BC%81&description=%E6%9C%AC%E5%8D%80%E6%8F%90%E4%BE%9B%E5%85%A8%E7%9C%81%E5%9C%8B%E4%B8%AD%E5%B0%8F%E5%90%84%E6%A0%A1%28%E4%B8%8D%E5%90%AB%E8%A3%9C%E6%A0%A1%29%E6%95%99%E7%A7%91%E6%9B%B8%E5%AF%A9%E5%AE%9A%E6%9C%AC%28%E4%B8%8D%E5%90%AB%E5%9C%8B%E5%B0%8F%E8%8B%B1%E8%AA%9E%2F%E9%84%89%E5%9C%9F%E8%AA%9E%E8%A8%80%29%E4%BD%BF%E7%94%A8%E7%89%88%E6%9C%AC%E6%9F%A5%E8%A9%A2%EF%BC%8C%E8%B3%87%E6%96%99%E5%83%85%E4%BE%9B%E5%8F%83%E8%80%83%EF%BC%8C%E8%8B%A5%E9%9C%80%E7%A2%BA%E8%AA%8D%E5%AF%A6%E9%9A%9B%E4%BD%BF%E7%94%A8%E7%89%88%E6%9C%AC%EF%BC%8C%E7%85%A9%E8%AB%8B%E9%80%95%E8%88%87%E5%90%84%E6%A0%A1%E6%9F%A5%E8%A9%A2%E3%80%82&message=%E9%80%99%E5%80%8B%E8%AE%9A%EF%BC%81&redirect_uri=http%3A%2F%2Fwww%2Efacebook%2Ecom" target="_blank"><img src="/Template/2011/Images/Icon_FBLike.gif" width="33" height="16" border="0" align="absmiddle"></a></div></span></div>
+<div class="headline"><a href="http://www.knsh.com.tw/_KNSH/EduApp.asp" target="_blank"><span title="‧歡迎免費體驗下載">‧歡迎免費體驗下載…</span></a></div>
+<div class="headline"><a href="http://www.knsh.com.tw/_Group/Award.asp" target="_blank"><span title="‧康軒出版好書獲得獎肯定">‧康軒出版好書獲得獎肯定…</span></a></div>
+</div>
+<div class="break"></div>
+</div>
+</div>
+<div id="news_right">
+<div id="news_2">
+<div class="title"><span>康橋焦點</span></div>
+<div class="pic"><a href="http://www.kcbs.ntpc.edu.tw/e-paper/no052/no052.html" target="_blank"><img src="/Upload/Main_News_Area/544/Photo.jpg" width="100" height="75" border="0" /></a></div>
+<div class="content_block">
+<div class="headline"><a href="http://www.kcbs.ntpc.edu.tw/e-paper/no052/no052.html" target="_blank"><span title="‧讓孩子把全世界當成教科書">‧讓孩子把全世界當成教科書…</span></a></div>
+<div class="article"><span title="在教學的現場上，我們一直在思考，到底要給孩子什麼？學生想學的又是甚麼，教師們到底怎麼樣做才能讓孩子的學習產生了個人學習的意義...這些一直都是康橋所重視的...">在教學的現場上，我們一直在思考，到底要給孩子什麼？學生想學的又是甚麼，教師們到底怎麼樣做才能讓孩子的學習產生了個人學習的意義...這些一…<div style="float:right;_margin-top:-25px;*margin-top:-25px;"><a href="http://www.facebook.com/dialog/feed?app_id=400548309962867&link=http%3A%2F%2Fwww%2Ekcbs%2Entpc%2Eedu%2Etw%2Fe%2Dpaper%2Fno052%2Fno052%2Ehtml&picture=http%3A%2F%2Fwww%2Eknsh%2Ecom%2Etw%2FUpload%2FMain%5FNews%5FArea%2F544%2FPhoto%2Ejpg&name=%E2%80%A7%E8%AE%93%E5%AD%A9%E5%AD%90%E6%8A%8A%E5%85%A8%E4%B8%96%E7%95%8C%E7%95%B6%E6%88%90%E6%95%99%E7%A7%91%E6%9B%B8&caption=%E2%80%A7%E8%AE%93%E5%AD%A9%E5%AD%90%E6%8A%8A%E5%85%A8%E4%B8%96%E7%95%8C%E7%95%B6%E6%88%90%E6%95%99%E7%A7%91%E6%9B%B8&description=%E5%9C%A8%E6%95%99%E5%AD%B8%E7%9A%84%E7%8F%BE%E5%A0%B4%E4%B8%8A%EF%BC%8C%E6%88%91%E5%80%91%E4%B8%80%E7%9B%B4%E5%9C%A8%E6%80%9D%E8%80%83%EF%BC%8C%E5%88%B0%E5%BA%95%E8%A6%81%E7%B5%A6%E5%AD%A9%E5%AD%90%E4%BB%80%E9%BA%BC%EF%BC%9F%E5%AD%B8%E7%94%9F%E6%83%B3%E5%AD%B8%E7%9A%84%E5%8F%88%E6%98%AF%E7%94%9A%E9%BA%BC%EF%BC%8C%E6%95%99%E5%B8%AB%E5%80%91%E5%88%B0%E5%BA%95%E6%80%8E%E9%BA%BC%E6%A8%A3%E5%81%9A%E6%89%8D%E8%83%BD%E8%AE%93%E5%AD%A9%E5%AD%90%E7%9A%84%E5%AD%B8%E7%BF%92%E7%94%A2%E7%94%9F%E4%BA%86%E5%80%8B%E4%BA%BA%E5%AD%B8%E7%BF%92%E7%9A%84%E6%84%8F%E7%BE%A9%2E%2E%2E%E9%80%99%E4%BA%9B%E4%B8%80%E7%9B%B4%E9%83%BD%E6%98%AF%E5%BA%B7%E6%A9%8B%E6%89%80%E9%87%8D%E8%A6%96%E7%9A%84%2E%2E%2E&message=%E9%80%99%E5%80%8B%E8%AE%9A%EF%BC%81&redirect_uri=http%3A%2F%2Fwww%2Efacebook%2Ecom" target="_blank"><img src="/Template/2011/Images/Icon_FBLike.gif" width="33" height="16" border="0" align="absmiddle"></a></div></span></div>
+<div class="headline"><a href="http://hellokcbs.pixnet.net/blog/post/108691153" target="_blank"><span title="‧在康橋學數學～愈學愈有序">‧在康橋學數學～愈學愈有序…</span></a></div>
+<div class="headline"><a href="http://www.kcbs.ntpc.edu.tw/topnews/2014/1031225.html" target="_blank"><span title="‧康橋管弦赴日 將軍令震撼全場">‧康橋管弦赴日 將軍令震撼全場…</span></a></div>
+</div>
+<div class="break"></div>
+</div>
+</div>
+<div class="break"></div>
+</div>
+<div id="news_block">
+<div id="news_left">
+<div id="news_3">
+<div class="title"><span>媒體專區 </span></div>
+<div class="more"><img align="absmiddle" src="/Template/2011/Images/Icon_More.gif" width="8" height="7" /> <a href="http://www.knsh.com.tw/_Group/News_Media.asp" target="_blank" class="b_12">看更多</a></div><div class="pic"><a href="http://www.chinatimes.com/newspapers/20150121000465-260107" target="_blank"><img src="/Upload/Main_News_Area/545/Photo.jpg" width="100" height="75" border="0" /></a></div>
+<div class="content_block">
+<div class="headline"><a href="http://www.chinatimes.com/newspapers/20150121000465-260107" target="_blank"><span title="‧鐵人夢語－人才培育應從本質做起">‧鐵人夢語－人才培育應從本質做…</span></a></div>
+<div class="article"><span title="前幾天媒體報導近幾年餐飲類科系過多，教育部怕造成技術發展和人力供需不平衡，將限制餐飲科系的增設，這除了凸顯我們教育發展政策的前瞻性問題，也讓我們省思教育該用什麼心態來面對快速改變的社會？">前幾天媒體報導近幾年餐飲類科系過多，教育部怕造成技術發展和人力供需不平衡，將限制餐飲科系的增設，這除了凸顯我們教育發展政策的前瞻性問題，…<div style="float:right;_margin-top:-25px;*margin-top:-25px;"><a href="http://www.facebook.com/dialog/feed?app_id=400548309962867&link=http%3A%2F%2Fwww%2Echinatimes%2Ecom%2Fnewspapers%2F20150121000465%2D260107&picture=http%3A%2F%2Fwww%2Eknsh%2Ecom%2Etw%2FUpload%2FMain%5FNews%5FArea%2F545%2FPhoto%2Ejpg&name=%E2%80%A7%E9%90%B5%E4%BA%BA%E5%A4%A2%E8%AA%9E%EF%BC%8D%E4%BA%BA%E6%89%8D%E5%9F%B9%E8%82%B2%E6%87%89%E5%BE%9E%E6%9C%AC%E8%B3%AA%E5%81%9A%E8%B5%B7&caption=%E2%80%A7%E9%90%B5%E4%BA%BA%E5%A4%A2%E8%AA%9E%EF%BC%8D%E4%BA%BA%E6%89%8D%E5%9F%B9%E8%82%B2%E6%87%89%E5%BE%9E%E6%9C%AC%E8%B3%AA%E5%81%9A%E8%B5%B7&description=%E5%89%8D%E5%B9%BE%E5%A4%A9%E5%AA%92%E9%AB%94%E5%A0%B1%E5%B0%8E%E8%BF%91%E5%B9%BE%E5%B9%B4%E9%A4%90%E9%A3%B2%E9%A1%9E%E7%A7%91%E7%B3%BB%E9%81%8E%E5%A4%9A%EF%BC%8C%E6%95%99%E8%82%B2%E9%83%A8%E6%80%95%E9%80%A0%E6%88%90%E6%8A%80%E8%A1%93%E7%99%BC%E5%B1%95%E5%92%8C%E4%BA%BA%E5%8A%9B%E4%BE%9B%E9%9C%80%E4%B8%8D%E5%B9%B3%E8%A1%A1%EF%BC%8C%E5%B0%87%E9%99%90%E5%88%B6%E9%A4%90%E9%A3%B2%E7%A7%91%E7%B3%BB%E7%9A%84%E5%A2%9E%E8%A8%AD%EF%BC%8C%E9%80%99%E9%99%A4%E4%BA%86%E5%87%B8%E9%A1%AF%E6%88%91%E5%80%91%E6%95%99%E8%82%B2%E7%99%BC%E5%B1%95%E6%94%BF%E7%AD%96%E7%9A%84%E5%89%8D%E7%9E%BB%E6%80%A7%E5%95%8F%E9%A1%8C%EF%BC%8C%E4%B9%9F%E8%AE%93%E6%88%91%E5%80%91%E7%9C%81%E6%80%9D%E6%95%99%E8%82%B2%E8%A9%B2%E7%94%A8%E4%BB%80%E9%BA%BC%E5%BF%83%E6%85%8B%E4%BE%86%E9%9D%A2%E5%B0%8D%E5%BF%AB%E9%80%9F%E6%94%B9%E8%AE%8A%E7%9A%84%E7%A4%BE%E6%9C%83%EF%BC%9F&message=%E9%80%99%E5%80%8B%E8%AE%9A%EF%BC%81&redirect_uri=http%3A%2F%2Fwww%2Efacebook%2Ecom" target="_blank"><img src="/Template/2011/Images/Icon_FBLike.gif" width="33" height="16" border="0" align="absmiddle"></a></div></span></div>
+<div class="headline"><a href="http://www.chinatimes.com/newspapers/20150113000480-260107" target="_blank"><span title="‧鐵人夢語－實驗教育 配套要到位">‧鐵人夢語－實驗教育 配套要到…</span></a></div>
+<div class="headline"><a href="http://www.chinatimes.com/newspapers/20150106000490-260107" target="_blank"><span title="‧鐵人夢語－讓孩子親手種出幸福感">‧鐵人夢語－讓孩子親手種出幸福…</span></a></div>
+</div>
+<div class="break"></div>
+</div>
+</div>
+<div id="news_right">
+<div id="news_4">
+<div class="title"><span>運動康軒</span></div>
+<div class="more"><img align="absmiddle" src="/Template/2011/Images/Icon_More.gif" width="8" height="7" /> <a href="http://blog.udn.com/kstblog2009" target="_blank" class="b_12">看更多</a></div><div class="pic"><a href="http://blog.udn.com/kstblog2009/19394239" target="_blank"><img src="/Upload/Main_News_Area/534/Photo.JPG" width="100" height="75" border="0" /></a></div>
+<div class="content_block">
+<div class="headline"><a href="http://blog.udn.com/kstblog2009/19394239" target="_blank"><span title="‧【登山】康軒玉山主峰健行">‧【登山】康軒玉山主峰健行…</span></a></div>
+<div class="article"><span title="在前往標高3‚952公尺的路上，我們做了許多努力，也付出辛苦的代價。每個人登玉山的理由不盡相同，但最後都匯集成一股相同的信念──互相扶持，攻頂！">在前往標高3‚952公尺的路上，我們做了許多努力，也付出辛苦的代價。每個人登玉山的理由不盡相同，但最後都匯集成一股相同的信念──互相扶持…<div style="float:right;_margin-top:-25px;*margin-top:-25px;"><a href="http://www.facebook.com/dialog/feed?app_id=400548309962867&link=http%3A%2F%2Fblog%2Eudn%2Ecom%2Fkstblog2009%2F19394239&picture=http%3A%2F%2Fwww%2Eknsh%2Ecom%2Etw%2FUpload%2FMain%5FNews%5FArea%2F534%2FPhoto%2EJPG&name=%E2%80%A7%E3%80%90%E7%99%BB%E5%B1%B1%E3%80%91%E5%BA%B7%E8%BB%92%E7%8E%89%E5%B1%B1%E4%B8%BB%E5%B3%B0%E5%81%A5%E8%A1%8C&caption=%E2%80%A7%E3%80%90%E7%99%BB%E5%B1%B1%E3%80%91%E5%BA%B7%E8%BB%92%E7%8E%89%E5%B1%B1%E4%B8%BB%E5%B3%B0%E5%81%A5%E8%A1%8C&description=%E5%9C%A8%E5%89%8D%E5%BE%80%E6%A8%99%E9%AB%983%E2%80%9A952%E5%85%AC%E5%B0%BA%E7%9A%84%E8%B7%AF%E4%B8%8A%EF%BC%8C%E6%88%91%E5%80%91%E5%81%9A%E4%BA%86%E8%A8%B1%E5%A4%9A%E5%8A%AA%E5%8A%9B%EF%BC%8C%E4%B9%9F%E4%BB%98%E5%87%BA%E8%BE%9B%E8%8B%A6%E7%9A%84%E4%BB%A3%E5%83%B9%E3%80%82%E6%AF%8F%E5%80%8B%E4%BA%BA%E7%99%BB%E7%8E%89%E5%B1%B1%E7%9A%84%E7%90%86%E7%94%B1%E4%B8%8D%E7%9B%A1%E7%9B%B8%E5%90%8C%EF%BC%8C%E4%BD%86%E6%9C%80%E5%BE%8C%E9%83%BD%E5%8C%AF%E9%9B%86%E6%88%90%E4%B8%80%E8%82%A1%E7%9B%B8%E5%90%8C%E7%9A%84%E4%BF%A1%E5%BF%B5%E2%94%80%E2%94%80%E4%BA%92%E7%9B%B8%E6%89%B6%E6%8C%81%EF%BC%8C%E6%94%BB%E9%A0%82%EF%BC%81&message=%E9%80%99%E5%80%8B%E8%AE%9A%EF%BC%81&redirect_uri=http%3A%2F%2Fwww%2Efacebook%2Ecom" target="_blank"><img src="/Template/2011/Images/Icon_FBLike.gif" width="33" height="16" border="0" align="absmiddle"></a></div></span></div>
+<div class="headline"><a href="http://blog.udn.com/kstblog2009/19339048" target="_blank"><span title="‧【登山】康軒南湖大山登山隊">‧【登山】康軒南湖大山登山隊…</span></a></div>
+<div class="headline"><a href="http://blog.udn.com/kstblog2009/16962764" target="_blank"><span title="‧【健康】天天至少運動15分鐘，也能輕鬆享有健康">‧【健康】天天至少運動15分鐘…</span></a></div>
+</div>
+<div class="break"></div>
+</div>
+</div>
+<div class="break"></div>
+</div>
+<div id="news_block">
+<div id="news_left">
+<div id="news_5">
+<div class="title"><span>公益康軒</span></div>
+<div class="more"><img align="absmiddle" src="/Template/2011/Images/Icon_More.gif" width="8" height="7" /> <a href="http://www.knsh.com.tw/_Group/Charity.asp" target="_blank" class="b_12">看更多</a></div><div class="pic"><a href="http://www.knsh.com.tw/_Group/Charity.asp" target="_blank"><img src="/Upload/Main_News_Area/159/Photo.jpg" width="100" height="75" border="0" /></a></div>
+<div class="content_block">
+<div class="headline"><a href="http://www.knsh.com.tw/_Group/Charity.asp" target="_blank"><span title="‧103年康軒學習雜誌公益贈閱">‧103年康軒學習雜誌公益贈閱…</span></a></div>
+<div class="article"><span title="「康軒學習雜誌」贈閱活動，共有33所育幼院索贈雜誌，共贈出學前版21年份、初階版&進階版65年份，總計贈出1,812期雜誌，贈出市價共456,750元。">「康軒學習雜誌」贈閱活動，共有33所育幼院索贈雜誌，共贈出學前版21年份、初階版&進階版65年份，總計贈出1,812期雜誌，贈出市價共4…<div style="float:right;_margin-top:-25px;*margin-top:-25px;"><a href="http://www.facebook.com/dialog/feed?app_id=400548309962867&link=http%3A%2F%2Fwww%2Eknsh%2Ecom%2Etw%2F%5FGroup%2FCharity%2Easp&picture=http%3A%2F%2Fwww%2Eknsh%2Ecom%2Etw%2FUpload%2FMain%5FNews%5FArea%2F159%2FPhoto%2Ejpg&name=%E2%80%A7103%E5%B9%B4%E5%BA%B7%E8%BB%92%E5%AD%B8%E7%BF%92%E9%9B%9C%E8%AA%8C%E5%85%AC%E7%9B%8A%E8%B4%88%E9%96%B1&caption=%E2%80%A7103%E5%B9%B4%E5%BA%B7%E8%BB%92%E5%AD%B8%E7%BF%92%E9%9B%9C%E8%AA%8C%E5%85%AC%E7%9B%8A%E8%B4%88%E9%96%B1&description=%E3%80%8C%E5%BA%B7%E8%BB%92%E5%AD%B8%E7%BF%92%E9%9B%9C%E8%AA%8C%E3%80%8D%E8%B4%88%E9%96%B1%E6%B4%BB%E5%8B%95%EF%BC%8C%E5%85%B1%E6%9C%8933%E6%89%80%E8%82%B2%E5%B9%BC%E9%99%A2%E7%B4%A2%E8%B4%88%E9%9B%9C%E8%AA%8C%EF%BC%8C%E5%85%B1%E8%B4%88%E5%87%BA%E5%AD%B8%E5%89%8D%E7%89%8821%E5%B9%B4%E4%BB%BD%E3%80%81%E5%88%9D%E9%9A%8E%E7%89%88%26%E9%80%B2%E9%9A%8E%E7%89%8865%E5%B9%B4%E4%BB%BD%EF%BC%8C%E7%B8%BD%E8%A8%88%E8%B4%88%E5%87%BA1%2C812%E6%9C%9F%E9%9B%9C%E8%AA%8C%EF%BC%8C%E8%B4%88%E5%87%BA%E5%B8%82%E5%83%B9%E5%85%B1456%2C750%E5%85%83%E3%80%82&message=%E9%80%99%E5%80%8B%E8%AE%9A%EF%BC%81&redirect_uri=http%3A%2F%2Fwww%2Efacebook%2Ecom" target="_blank"><img src="/Template/2011/Images/Icon_FBLike.gif" width="33" height="16" border="0" align="absmiddle"></a></div></span></div>
+<div class="headline"><a href="http://www.knsh.com.tw/_Group/Charity.asp" target="_blank"><span title="‧康軒響應搶救蒜農活動">‧康軒響應搶救蒜農活動…</span></a></div>
+<div class="headline"><a href="http://www.knsh.com.tw/Promo/20100715/index.html" target="_blank"><span title="‧康軒幫助弱勢學習不中斷">‧康軒幫助弱勢學習不中斷…</span></a></div>
+</div>
+<div class="break"></div>
+</div>
+</div>
+<div id="news_right">
+<div id="news_6">
+<div class="title"><span>好書康軒</span></div>
+<div class="more"><img align="absmiddle" src="/Template/2011/Images/Icon_More.gif" width="8" height="7" /> <a href="http://www.k9books.com.tw/" target="_blank" class="b_12">看更多</a></div><div class="pic"><a href="http://www.k9books.com.tw/ec99/knsh/GoodsDescr.asp?prod_id=5081910172-55&parent_id=0&category_id=246" target="_blank"><img src="/Upload/Main_News_Area/533/Photo.jpg" width="100" height="75" border="0" /></a></div>
+<div class="content_block">
+<div class="headline"><a href="http://www.k9books.com.tw/ec99/knsh/GoodsDescr.asp?prod_id=5081910172-55&parent_id=0&category_id=246" target="_blank"><span title="‧新書推薦：《動物比一比》">‧新書推薦：《動物比一比》…</span></a></div>
+<div class="article"><span title="認識動物真開心，牠們長得有點像，讓我們來比一比，究竟哪裡不一樣？本書以外型相似的「動物」為主題，內容呈現真實的圖片並搭配可愛插畫，引導低幼的孩子從外觀、形體和功能分辨這些動物的不同，並培養觀察的能力。">認識動物真開心，牠們長得有點像，讓我們來比一比，究竟哪裡不一樣？本書以外型相似的「動物」為主題，內容呈現真實的圖片並搭配可愛插畫，引導低…<div style="float:right;_margin-top:-25px;*margin-top:-25px;"><a href="http://www.facebook.com/dialog/feed?app_id=400548309962867&link=http%3A%2F%2Fwww%2Ek9books%2Ecom%2Etw%2Fec99%2Fknsh%2FGoodsDescr%2Easp%3Fprod%5Fid%3D5081910172%2D55%26parent%5Fid%3D0%26category%5Fid%3D246&picture=http%3A%2F%2Fwww%2Eknsh%2Ecom%2Etw%2FUpload%2FMain%5FNews%5FArea%2F533%2FPhoto%2Ejpg&name=%E2%80%A7%E6%96%B0%E6%9B%B8%E6%8E%A8%E8%96%A6%EF%BC%9A%E3%80%8A%E5%8B%95%E7%89%A9%E6%AF%94%E4%B8%80%E6%AF%94%E3%80%8B&caption=%E2%80%A7%E6%96%B0%E6%9B%B8%E6%8E%A8%E8%96%A6%EF%BC%9A%E3%80%8A%E5%8B%95%E7%89%A9%E6%AF%94%E4%B8%80%E6%AF%94%E3%80%8B&description=%E8%AA%8D%E8%AD%98%E5%8B%95%E7%89%A9%E7%9C%9F%E9%96%8B%E5%BF%83%EF%BC%8C%E7%89%A0%E5%80%91%E9%95%B7%E5%BE%97%E6%9C%89%E9%BB%9E%E5%83%8F%EF%BC%8C%E8%AE%93%E6%88%91%E5%80%91%E4%BE%86%E6%AF%94%E4%B8%80%E6%AF%94%EF%BC%8C%E7%A9%B6%E7%AB%9F%E5%93%AA%E8%A3%A1%E4%B8%8D%E4%B8%80%E6%A8%A3%EF%BC%9F%E6%9C%AC%E6%9B%B8%E4%BB%A5%E5%A4%96%E5%9E%8B%E7%9B%B8%E4%BC%BC%E7%9A%84%E3%80%8C%E5%8B%95%E7%89%A9%E3%80%8D%E7%82%BA%E4%B8%BB%E9%A1%8C%EF%BC%8C%E5%85%A7%E5%AE%B9%E5%91%88%E7%8F%BE%E7%9C%9F%E5%AF%A6%E7%9A%84%E5%9C%96%E7%89%87%E4%B8%A6%E6%90%AD%E9%85%8D%E5%8F%AF%E6%84%9B%E6%8F%92%E7%95%AB%EF%BC%8C%E5%BC%95%E5%B0%8E%E4%BD%8E%E5%B9%BC%E7%9A%84%E5%AD%A9%E5%AD%90%E5%BE%9E%E5%A4%96%E8%A7%80%E3%80%81%E5%BD%A2%E9%AB%94%E5%92%8C%E5%8A%9F%E8%83%BD%E5%88%86%E8%BE%A8%E9%80%99%E4%BA%9B%E5%8B%95%E7%89%A9%E7%9A%84%E4%B8%8D%E5%90%8C%EF%BC%8C%E4%B8%A6%E5%9F%B9%E9%A4%8A%E8%A7%80%E5%AF%9F%E7%9A%84%E8%83%BD%E5%8A%9B%E3%80%82&message=%E9%80%99%E5%80%8B%E8%AE%9A%EF%BC%81&redirect_uri=http%3A%2F%2Fwww%2Efacebook%2Ecom" target="_blank"><img src="/Template/2011/Images/Icon_FBLike.gif" width="33" height="16" border="0" align="absmiddle"></a></div></span></div>
+<div class="headline"><a href="http://www.k9books.com.tw/ec99/knsh/GoodsDescr.asp?prod_id=5081910173-55&parent_id=0&category_id=246" target="_blank"><span title="‧新書推薦：《植物比一比》">‧新書推薦：《植物比一比》…</span></a></div>
+<div class="headline"><a href="http://www.k9books.com.tw/ec99/knsh/GoodsDescr.asp?category_id=246&parent_id=0&prod_id=5081910166-55" target="_blank"><span title="‧第一個發明的故事套書">‧第一個發明的故事套書…</span></a></div>
+</div>
+<div class="break"></div>
+</div>
+</div>
+
+<div class="break"></div>
+</div>
+<div id="news_block">
+<div id="news_left">
+<div id="news_7">
+<div class="title"><span>最新影音</span></div>
+<div class="more"><img align="absmiddle" src="/Template/2011/Images/Icon_More.gif" width="8" height="7" /> <a href="http://www.youtube.com/user/knshchannel" class="b_12" target="_blank">看更多</a></div>
+<div class="video_block">
+<div class="video"></div>
+<ul class="playlist">
+  <ul class="itemList">
+    <li style="display:none;"><a href="http://www.youtube.com/watch?v=pWfe3o0E28g">201410.9~12 康軒南湖大山登山隊</a></li>
+  </ul>
+  <div class="showBox">
+  <li><img src="/Template/2011/Images/title_channel1.gif" width="350" height="30" /></li>
+  <div class="roll"></div>
+  <div class="showBoxbtn">
+  <a class="prev" href="javascript:viod(0);">Prev</a>
+  <a class="next" href="javascript:viod(0);">Next</a>
+  </div>
+  <ul class="itemList">
+    <li>
+    <a href="http://www.youtube.com/watch?v=pWfe3o0E28g" class="adContent">201410.9~12 康軒南湖大山登山隊</a>
+    <a href="http://www.youtube.com/watch?v=wcxGKa-0g9A" class="adContent">2014.10.5~6 康軒玉山主峰健行</a>
+    <a href="http://www.youtube.com/watch?v=c8MPnhvAI3E" class="adContent">201408_台北營業部國中桃園區單車環島活動</a>
+    </li>
+    <li>
+    <a href="http://www.youtube.com/watch?v=gPLsLslhHUk" class="adContent">2014.6.27~6.29 康軒編五部合歡群峰團</a>
+    <a href="http://www.youtube.com/watch?v=BSe1Qo4kAf8" class="adContent">2014.6.6~6.8 Top945營業部玉山攻頂團</a>
+    <a href="http://www.youtube.com/watch?v=YxHqqBKTAcA" class="adContent">201406_南京康軒天目湖單車活動</a>
+    </li>
+    <li>
+    <a href="http://www.youtube.com/watch?v=yTi0yh04J9s" class="adContent">2013.12.6～12.8 台中營業部奇萊主北峰攻頂紀實</a>
+    <a href="http://www.youtube.com/watch?v=Xm3QiS5sraQ" class="adContent">2013.12.28～12.30 康軒玉山主峰團</a>
+    <a href="http://www.youtube.com/watch?v=ASH-qv8lMnY" class="adContent">2013.08.09～11 康軒合歡群峰團</a>
+    </li>
+    <li>
+    <a href="http://www.youtube.com/watch?v=eMcxkvE_L4s" class="adContent">2013國道馬拉松</a>
+    <a href="http://www.youtube.com/watch?v=a2oYuSfOUe0" class="adContent">2013萬金石國際馬拉松</a>
+    <a href="http://www.youtube.com/watch?v=Q0_uDkeFfYY" class="adContent">2012康軒文教年度紀事</a>
+    </li>
+  </ul>
+  </div>
+  <div class="showBox">
+  <li><img src="/Template/2011/Images/title_channel2.gif" width="350" height="30" /></li>
+  <div class="roll"></div>
+  <div class="showBoxbtn">
+  <a class="prev" href="javascript:viod(0);">Prev</a>
+  <a class="next" href="javascript:viod(0);">Next</a>
+  </div>
+  <ul class="itemList">
+    <li>
+    <a href="http://www.youtube.com/watch?v=ZjcdVfjkaRg" class="adContent">康橋英語村 讓夢想無國界</a>
+    <a href="http://www.youtube.com/watch?v=QOGwbgcN7FQ" class="adContent">田園純樸喜樂 在康橋感受生命與愛</a>
+    <a href="http://www.youtube.com/watch?v=sAEGCl8nehQ" class="adContent">探索成功基因 康橋勇敢築夢</a>
+    </li>
+    <li>
+    <a href="http://www.youtube.com/watch?v=VxgITp-0wc8" class="adContent">2012 傳愛在康橋藝文公演 - 小學英語劇</a>
+    <a href="http://www.youtube.com/watch?v=z2sHLxFP1S4" class="adContent">2012 築夢康橋壯遊台灣</a>
+    <a href="http://www.youtube.com/watch?v=Z097XDN1F1g" class="adContent">康橋高中 2012 高中社團成果發表</a>
+    </li>
+    <li>
+    <a href="http://www.youtube.com/watch?v=6soG5SqLcdk" class="adContent">2012 康橋單車環台行前練習回顧</a>
+    <a href="http://www.youtube.com/watch?v=TOUS6TqUNzg" class="adContent">【100-2 藝文講座】法國號的前世今生</a>
+    <a href="http://www.youtube.com/watch?v=UEZPWL05C1A" class="adContent">聯合報@英數達人競賽 台灣小學生奪總冠軍</a>
+    </li>
+    <li>
+    <a href="http://www.youtube.com/watch?v=BWJE3FTMVTA" class="adContent">2012 家長日校內公演：管弦樂合奏</a>
+    <a href="http://www.youtube.com/watch?v=G0pkq0Vxp9Y" class="adContent">2012 家長日校內公演：弦樂合奏</a>
+    <a href="http://www.youtube.com/watch?v=QUf3RlgJT44" class="adContent">2012 家長日校內公演：高中鋼琴三重奏</a>
+    </li>
+  </ul>
+  </div>
+</ul>
+</div>
+</div>
+</div>
+<div id="news_right">
+<div id="news_8">
+<div class="title"><span>Facebook粉絲團</span></div>
+<div class="more"><img align="absmiddle" src="/Template/2011/Images/Icon_More.gif" width="8" height="7" /> <a href="http://www.facebook.com/KangHsuan" class="b_12" target="_blank">看更多</a></div>
+<div class="facebook_block">
+<!--script src="http://connect.facebook.net/zh_TW/all.js#xfbml=1"></script><fb:like-box href="http://www.facebook.com/KangHsuan" width="350" show_faces="true" stream="true" header="false"></fb:like-box-->
+<iframe src="https://www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2FKangHsuan&amp;width=350&amp;colorscheme=light&amp;show_faces=true&amp;stream=false&amp;header=false&amp;height=270" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:350px; height:270px;" allowTransparency="true"></iframe>
+</div>
+
+
+
+<div id="fb_box">
+  <ul>
+    <li class="fb">
+      <div class="in">優質創新‧康軒文教<br />
+      <a href="https://www.facebook.com/KangHsuan" target="_blank">進入康軒文教粉絲團</a></div>
+    </li>
+    <li class="fb">
+      <div class="in">Top945童樂會<br />
+      <a href="http://www.facebook.com/top945.fans" target="_blank">進入Top945粉絲團</a></div>
+    </li>
+    <li class="fb">
+      <div class="in">康軒愛說教<br />
+      <a href="https://www.facebook.com/945enet" target="_blank">進入教師網粉絲團</a></div>
+    </li>
+    <li class="fb">
+      <div class="in">康橋雙語學校粉絲團<br />
+      <a href="https://www.facebook.com/KCBS.tw" target="_blank">進入康橋學校粉絲團</a></div>
+    </li>
+    <li class="fb">
+      <div class="in">k9Books康軒書屋<br />
+      <a href="https://www.facebook.com/k9Books" target="_blank">進入康軒書屋粉絲團</a></div>
+    </li>
+    <li class="fb">
+      <div class="in">康軒親子學堂<br />
+      <a href="https://www.facebook.com/knsh.kids" target="_blank">進入康軒親子學堂</a></div>
+    </li>
+    <li class="fb">
+      <div class="in">康橋幼兒園粉絲團<br />
+      <a href="http://www.facebook.com/kangchiao.fans" target="_blank">進入康橋幼兒園粉絲團</a></div>
+    </li>
+    <li class="fb">
+      <div class="in">台灣拓人教育粉絲團<br />
+      <a href="https://www.facebook.com/tact.tw" target="_blank">進入台灣拓人粉絲團</a></div>
+    </li>
+    <li class="ex">
+      <div class="in">運動•康軒Blog<br />
+      <a href="http://blog.udn.com/kstblog2009/article" target="_blank">進入運動康軒部落格</a></div>
+    </li>
+  </ul>
+</div>
+</div>
+
+
+
+</div>
+<div class="break"></div>
+</div>
+<div id="knsh_links">
+<p><strong>【康軒家族】</strong><a href="http://www.945enet.com.tw" target="_blank">康軒教師網</a>｜<a href="http://www.k9books.com.tw/" target="_blank">k9Books 康軒書屋</a></p>
+<p><strong>【康軒產品】</strong><a href="http://www.top945.com.tw/" target="_blank">康軒學習雜誌</a>｜<a href="http://exam.knsh.com.tw/" target="_blank">康軒會考特招評量網</a>｜<a href="http://han-tsi5.knsh.com.tw" target="_blank">康軒番薯網</a>｜<a href="http://06kids.knsh.com.tw/" target="_blank">小康軒幼教網</a>｜<a href="http://www.kc-test.com.tw/" target="_blank">優數網</a>｜<a href="http://huayu.knsh.com.tw/" target="_blank">Hello,華語！</a></p>
+<p><strong>【教學機構】</strong><a href="http://www.kcbs.ntpc.edu.tw" target="_blank">康橋雙語學校</a>｜<a href="http://www.kcbs.ntpc.edu.tw/kindweb/" target="_blank">康橋附設幼兒園</a>｜<a href="http://www.kcisec.com/" target="_blank">華東康橋國際學校</a>｜<a href="http://www.tact.com.tw/" target="_blank">台灣拓人教育</a></p>
+<p><strong>【大陸事業】</strong><a href="http://www.knsh.com.cn/" target="_blank">南京康軒文教</a>｜<a href="http://www.06kids.com/" target="_blank">南京小康軒幼教網</a>｜<a href="http://www.kxzyjy.com/" target="_blank">康軒職業教育網</a>｜<a href="http://www.sci-kids.net/" target="_blank">科學小超人</a>｜<a href="http://e.weibo.com/scikids?ref=http%3A%2F%2Fwww.sci-kids.net%2F" target="_blank">科學小超人微博</a>｜<a href="http://www.ablesky.com/kangxuan" target="_blank">小康軒培訓中心</a></p>
+<p style="border-bottom:#d4d4d4 solid 1px; height:8px;">&nbsp;</p>
+<p style="height:8px">&nbsp;</p>
+<strong>【服務據點】</strong><a href="/_KNSH/Locations.asp?go=1" target="_blank">台北總公司</a>｜<a href="/_KNSH/Locations.asp?go=2" target="_blank">桃園分公司‧桃園物流公司</a>｜<a href="/_KNSH/Locations.asp?go=3" target="_blank">台中分公司</a>｜<a href="/_KNSH/Locations.asp?go=4" target="_blank">台南分公司</a>｜<a href="/_KNSH/Locations.asp?go=5" target="_blank">高雄辦事處</a>｜<a href="/_KNSH/Distribution.asp" target="_blank">台灣經銷據點</a>｜<a href="/_KXMC/Locations.asp" target="_blank">大陸營業據點</a>
+</div>
+<div class="break"></div>
+</div>
+<div class="break"></div>
+</div>
+</div>
+<div id="footer_bg"></div>
+</div>
+</div>
+</div>
+<div id="footer">
+<p style="text-align: center;">23146 新北市新店區中興路二段218巷11號　電話：(02)29189393　傳真：(02)29189377<br />No.11, Ln. 218, Sec. 2, Zhongxing Rd., Xindian Dist., New Taipei City 23146, Taiwan (R.O.C.)&nbsp;TEL：886-2-2918-9393 FAX：886-2-2918-9377<br />康軒文教集團 版權所有 &copy; 2011 Kang Hsuan Educational Publishing Group All Rights Reserved.</p>
+</div>
+
+</body>
+</html>
+
