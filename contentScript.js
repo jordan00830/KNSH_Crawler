@@ -27,9 +27,8 @@ chrome.runtime.onMessage.addListener(function(msg, sender, sendResponse){
 			break;	
 		case 'getBooks':
 			//Test version
-			KNSH_Crawler.getSchoolBook({'schoolID': 'SDA002,宜蘭國中' ,'schoolText': '宜蘭國中 - 宜蘭縣宜蘭市樹人路37號'}, 
-									{'semesterID':'1031b','semesterText':'國小103學年度上學期'}, 
-									{'countryID':'D','countryName':"宜蘭縣"}
+			KNSH_Crawler.getSchoolBook({'schoolID': 'SDA002,宜蘭國中' ,'schoolText': '宜蘭國中 - 宜蘭縣宜蘭市樹人路37號','countryID':'D','countryName':'宜蘭縣'}, 
+									{'semesterID':'1031b','semesterText':'國小103學年度上學期'}
 									, '2');
 			break;		
 	}
@@ -44,7 +43,7 @@ chrome.runtime.onMessage.addListener(function(msg, sender, sendResponse){
 var KNSH_Crawler = {
 	semesterList: [], // [{'semesterID':semesterID,'semesterText':semesterText}, ...]
 	countryList: [], // [{'countryID':countryID,'countryName':countryName}, ...]
-	schoolList: [],
+	schoolList: [], // {'schoolID':schoolID,'schoolText':schoolText,'countryID':country.countryID, 'countryName': country.countryName ,'gradeType':gradeType}
 	ResultList: [],
 	gradeListObj: {'ele': ['1','2','3','4','5','6'], 'jun': ['1','2','3']}, //ele:國小年級1~6, jun:國中年級1~3
 	init: function(){
@@ -53,7 +52,7 @@ var KNSH_Crawler = {
 		//console.log('KNSH crawler init!');
 	},
 	getAllSemesterAndCountry: function(){
-		$.post('http://www.knsh.com.tw/_KNSH/Version.asp?go_Sub_Topic=06?go_Sub_Topic=06',
+		$.post('/_KNSH/Version.asp?go_Sub_Topic=06?go_Sub_Topic=06',
 			function(data){
 				var SemesterList = KNSH_Crawler._processSemester(data);
 				KNSH_Crawler.semesterList = SemesterList;
@@ -103,7 +102,7 @@ var KNSH_Crawler = {
 		}
 	},
 	getSchoolList: function(semester,country){
-		$.post('http://www.knsh.com.tw/_KNSH/Version.asp?go_Sub_Topic=06?go_Sub_Topic=06',
+		$.post('/_KNSH/Version.asp?go_Sub_Topic=06?go_Sub_Topic=06',
 			{'hidsel1': semester.semesterID,
 			 'hidsel2': country.countryID
 			}
@@ -132,6 +131,8 @@ var KNSH_Crawler = {
 		//console.log(returnList);
 		return returnList;
 	},
+
+	// Chrome will crash down!
 	getAllSchoolBook: function(){
 		for(semIdx = 0 ; semIdx < KNSH_Crawler.semesterList.length; semIdx++){
 			for(schlIdx = 0 ; schlIdx < KNSH_Crawler.schoolList.length; schlIdx++){
@@ -154,20 +155,20 @@ var KNSH_Crawler = {
 		countryID: A~Y
 		grade: 用 semester.semesterText 來判斷=> 國中: 1~3, 國小: 1~6
 	*/
-	getSchoolBook: function(school, semester, country, grade){
-		$.post('http://www.knsh.com.tw/_KNSH/Version.asp?go_Sub_Topic=06?go_Sub_Topic=06',
+	getSchoolBook: function(school, semester, grade){
+		$.post('/_KNSH/Version.asp?go_Sub_Topic=06?go_Sub_Topic=06',
 			{'sel0':school.schoolID,
 			'sel1': semester.semesterID,
-			'sel2': country.countryID,
+			'sel2': school.countryID,
 			'sel4':grade,
 			'hidsubmited':'Y'}
 			,function(data){
-				var processed_data = KNSH_Crawler._processSchoolBook(data,school,semester,country);
+				var processed_data = KNSH_Crawler._processSchoolBook(data,school,semester);
 				KNSH_Crawler.ResultList = KNSH_Crawler.ResultList.concat(processed_data);
 				console.log(KNSH_Crawler.ResultList);
 			});
 	},
-	_processSchoolBook: function(data,school,semester,country){
+	_processSchoolBook: function(data,school,semester){
 		var $table = $(data).find('#table_1 tr');
 		var publisherNameMap = []; // column index => publisher name
 		var bookList = [];
@@ -207,7 +208,7 @@ var KNSH_Crawler = {
 				//var courseName = $currentRow.
 			}
 		});
-		returnData = {'bookList':bookList,'schoolText':school.schoolText,'countryName':country.countryName,'semesterText':semester.semesterText};
+		returnData = {'bookList':bookList,'schoolText':school.schoolText,'countryName':school.countryName,'semesterText':semester.semesterText};
 		//console.log(returnData);
 		return returnData;
 	}
